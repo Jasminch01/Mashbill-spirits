@@ -1,6 +1,38 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const { firstName, lastName, subject, message } = formData;
+
+    // Construct the mailto link
+    const mailtoLink = `mailto:ziggy@mashbillspirits.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(
+      `Name: ${firstName} ${lastName}\nMessage: ${message}`
+    )}`;
+
+    // Open the default email client
+    window.location.href = mailtoLink;
+  };
+
   return (
     <div>
       <div
@@ -24,7 +56,7 @@ const Contact = () => {
 
           {/* Form */}
           <div className="flex-1/2 z-10">
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               {/* First Name and Last Name */}
               <div className="space-y-2">
                 <label className="block font-bold text-sm text-white">
@@ -36,8 +68,10 @@ const Contact = () => {
                     <input
                       type="text"
                       name="firstName"
-                      placeholder=""
+                      value={formData.firstName}
+                      onChange={handleChange}
                       className="w-full px-4 py-2 border rounded border-gray-400 bg-transparent text-white placeholder-white/50 focus:outline-none"
+                      required
                     />
                     <p className="font-bold text-sm mt-3 text-white">
                       First Name
@@ -49,8 +83,10 @@ const Contact = () => {
                     <input
                       type="text"
                       name="lastName"
-                      placeholder=""
+                      value={formData.lastName}
+                      onChange={handleChange}
                       className="w-full px-4 py-2 border rounded border-gray-400 bg-transparent text-white placeholder-white/50"
+                      required
                     />
                     <p className="font-bold text-sm text-white mt-3">
                       Last Name
@@ -70,7 +106,11 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   className="w-full p-3 bg-transparent border rounded border-gray-400 text-white placeholder-white/50 focus:outline-none"
+                  required
                 />
               </div>
 
@@ -85,7 +125,11 @@ const Contact = () => {
                 <input
                   type="text"
                   id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
                   className="w-full p-3 bg-transparent border rounded border-gray-400 text-white placeholder-white/50 focus:outline-none"
+                  required
                 />
               </div>
 
@@ -99,8 +143,12 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   rows={4}
                   className="w-full p-3 bg-transparent border rounded border-gray-400 text-white placeholder-white/50 focus:outline-none"
+                  required
                 />
               </div>
 
@@ -108,7 +156,7 @@ const Contact = () => {
               <div>
                 <button
                   type="submit"
-                  className="uppercase bg-[#ed0000] px-6 py-1 font-bold text-white hover:bg-[#c40000] transition-colors duration-300 focus:outline-nonel cursor-pointer"
+                  className="uppercase bg-[#ed0000] px-6 py-1 font-bold text-white hover:bg-[#c40000] transition-colors duration-300 focus:outline-none cursor-pointer"
                 >
                   Send
                 </button>
