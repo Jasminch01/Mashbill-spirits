@@ -1,3 +1,9 @@
+import Banner from "@/components/Landing/Banner";
+
 export default function Home() {
-  return <div className=""></div>;
+  return (
+    <div className="bg-black">
+      <Banner />
+    </div>
+  );
 }
