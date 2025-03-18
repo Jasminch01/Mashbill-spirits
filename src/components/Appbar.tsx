@@ -33,13 +33,13 @@ const Appbar = () => {
             {menus.map((menu, idx) => (
               <li
                 key={idx}
-                className={`list-none font-normal text-base relative ${
+                className={`list-none font-normal text-base relative hover:text-white text-white/20 ${
                   idx !== menus.length - 1
                     ? "lg:after:content-[''] lg:after:block lg:after:w-[1px] lg:after:h-4 lg:after:bg-gray-300 lg:after:absolute lg:after:right-[-1.5rem] lg:after:top-[0.5rem] lg:after:transform lg:after:-translate-y-1/2"
                     : ""
                 }`}
               >
-                <Link href={menu.path} className="hover:text-blue-500">
+                <Link href={menu.path} className="">
                   {menu.menu}
                 </Link>
               </li>

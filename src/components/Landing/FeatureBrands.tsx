@@ -33,7 +33,7 @@ const FeatureBrands = () => {
               Wild &apos;N Out - No Chaser - send foodz
             </p>
             <div className="mt-5">
-              <button className="uppercase px-5 py-1 bg-[#ed0000] text-white text-sm sm:text-base">
+              <button className="uppercase px-5 py-1 bg-[#ed0000] hover:bg-[#c40000] cursor-pointer  text-white text-sm sm:text-base">
                 More
               </button>
             </div>
@@ -58,7 +58,7 @@ const FeatureBrands = () => {
               Kansas University - Goldens State Wariors
             </p>
             <div className="mt-5">
-              <button className="uppercase px-5 py-1 bg-[#ed0000] text-white text-sm sm:text-base">
+              <button className="uppercase px-5 py-1 bg-[#ed0000] hover:bg-[#c40000] cursor-pointer  text-white text-sm sm:text-base">
                 More
               </button>
             </div>
@@ -83,7 +83,7 @@ const FeatureBrands = () => {
               Mizzou - Los angeles lakers
             </p>
             <div className="mt-5">
-              <button className="uppercase px-5 py-1 bg-[#ed0000] text-white text-sm sm:text-base">
+              <button className="uppercase px-5 py-1 bg-[#ed0000] hover:bg-[#c40000] cursor-pointer text-white text-sm sm:text-base">
                 More
               </button>
             </div>

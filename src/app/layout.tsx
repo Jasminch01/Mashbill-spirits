@@ -10,7 +10,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Mashbill Spirits",
-  description: "",
+  description: "Welcome to Mashbill Spirits, your gateway to unparalleled opportunities in the premium liquor industry.",
 };
 
 export default function RootLayout({
