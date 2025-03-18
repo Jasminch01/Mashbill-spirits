@@ -11,7 +11,7 @@ const menus = [
   },
   {
     menu: "Technology",
-    path: "#tachnology",
+    path: "#technology",
   },
   {
     menu: "Our Brands",
@@ -74,6 +74,16 @@ const Appbar = () => {
             isOpen ? "translate-y-0" : "-translate-y-full"
           }`}
         >
+          {/* Close Icon Inside Mobile Menu */}
+          <div className="absolute top-5 right-4">
+            <IoClose
+              className="text-white"
+              size={30}
+              onClick={() => setIsOpen(false)}
+            />
+          </div>
+
+          {/* Menu Items */}
           <div className="flex flex-col items-center justify-center h-full">
             <ul className="flex flex-col items-center space-y-6">
               {menus.map((menu, idx) => (
