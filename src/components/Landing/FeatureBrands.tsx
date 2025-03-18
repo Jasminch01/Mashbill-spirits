@@ -5,7 +5,7 @@ const FeatureBrands = () => {
     <div className="max-w-7xl mx-auto relative py-10 px-4 sm:px-6 lg:px-8">
       {/* Glowing Background Circle */}
       <div className="absolute top-[10rem] -right-[12rem] transform -translate-x-1/2 -translate-y-1/2">
-        <div className="bg-[#ed0000] blur-3xl md:w-[700px] md:h-[521px] hidden rounded-full opacity-25" />
+        <div className="bg-[#ed0000] blur-3xl md:w-[700px] md:h-[521px] hidden lg:block rounded-full opacity-25" />
       </div>
 
       {/* Title */}
