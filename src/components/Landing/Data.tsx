@@ -4,7 +4,7 @@ import { IoGlobeOutline, IoRocketOutline } from "react-icons/io5";
 
 const Data = () => {
   return (
-    <div className="max-w-7xl mx-auto relative z-10 pb-10 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto relative z-10 pb-10 px-4 sm:px-6 lg:px-8" id="tachnology">
       {/* Text Content */}
       <div className="text-white mb-3">
         <p className="uppercase text-lg sm:text-xl ml-5">Data Analytics</p>

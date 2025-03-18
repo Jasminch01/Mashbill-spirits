@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8 relative">
+    <div className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8 relative" id="leadership">
       <div className="flex flex-col lg:flex-row gap-10">
         {/* Text Content */}
         <div className="text-white flex-1 text-center lg:text-right">

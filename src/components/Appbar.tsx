@@ -1,4 +1,8 @@
+"use client";
 import Link from "next/link";
+import { useState } from "react";
+import { CgMenuRight } from "react-icons/cg";
+import { IoClose } from "react-icons/io5";
 
 const menus = [
   {
@@ -7,29 +11,31 @@ const menus = [
   },
   {
     menu: "Technology",
-    path: "/",
+    path: "#tachnology",
   },
   {
     menu: "Our Brands",
-    path: "/",
+    path: "#brands",
   },
   {
     menu: "Leadership",
-    path: "/",
+    path: "#leadership",
   },
   {
     menu: "Contact",
-    path: "/",
+    path: "#contact",
   },
 ];
 
 const Appbar = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white py-5 lg:py-0">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-center py-4">
-          {/* Menu items */}
-          <ul className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-8">
+        {/* Desktop Menu */}
+        <div className="lg:flex items-center justify-center py-4 hidden">
+          <ul className="flex items-center lg:space-x-8">
             {menus.map((menu, idx) => (
               <li
                 key={idx}
@@ -39,12 +45,49 @@ const Appbar = () => {
                     : ""
                 }`}
               >
-                <Link href={menu.path} className="">
-                  {menu.menu}
-                </Link>
+                <Link href={menu.path}>{menu.menu}</Link>
               </li>
             ))}
           </ul>
+        </div>
+
+        {/* Mobile Menu Toggle */}
+        <div className="lg:hidden flex justify-end">
+          {!isOpen ? (
+            <CgMenuRight
+              className="text-white"
+              size={30}
+              onClick={() => setIsOpen(true)}
+            />
+          ) : (
+            <IoClose
+              className="text-white"
+              size={30}
+              onClick={() => setIsOpen(false)}
+            />
+          )}
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`lg:hidden fixed inset-0 bg-black z-50 transition-all duration-500 ease-in-out transform ${
+            isOpen ? "translate-y-0" : "-translate-y-full"
+          }`}
+        >
+          <div className="flex flex-col items-center justify-center h-full">
+            <ul className="flex flex-col items-center space-y-6">
+              {menus.map((menu, idx) => (
+                <li
+                  key={idx}
+                  className="list-none font-normal text-2xl hover:text-white text-white/50"
+                >
+                  <Link href={menu.path} onClick={() => setIsOpen(false)}>
+                    {menu.menu}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
