@@ -3,11 +3,13 @@ import Image from "next/image";
 const Banner = () => {
   return (
     <div className="max-w-7xl mx-auto pt-10">
-      <Image src={"/mashbill1.png"} width={300} height={300} alt="mashbill" />
+      <div className="flex justify-center lg:justify-start">
+        <Image src={"/mashbill1.png"} width={300} height={300} alt="mashbill" />
+      </div>
 
       {/* banner */}
-      <div className="flex items-center justify-between">
-        <div className="text-white text-left w-[600px]">
+      <div className="flex xl:flex-row flex-col-reverse items-center justify-between mb-10 px-5 lg:px-0">
+        <div className="text-white text-left xl:w-[600px]">
           <p className="text-3xl uppercase mb-5">
             Revolutionizing the Liquor Industry
           </p>
@@ -32,12 +34,14 @@ const Banner = () => {
             </p>
           </div>
 
-          <button className="uppercase bg-[#ed0000] p-3 font-bold mt-24">Contact Us</button>
+          <button className="uppercase bg-[#ed0000] p-3 font-bold lg:mt-24 mt-5">
+            Contact Us
+          </button>
         </div>
         <div className="flex-1">
           <Image
             src={"/banner.png"}
-            className="w-full"
+            className="lg:w-full"
             width={500}
             height={500}
             alt="mashbill-banner"
