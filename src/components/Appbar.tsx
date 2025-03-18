@@ -31,8 +31,8 @@ const Appbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <div className="bg-black text-white py-5 lg:py-0">
-      <div className="container mx-auto px-4">
+    <div className="bg-black text-white py-5 lg:py-0  fixed w-full mx-auto z-20">
+      <div className="container mx-auto px-4 flex justify-center">
         {/* Desktop Menu */}
         <div className="lg:flex items-center justify-center py-4 hidden">
           <ul className="flex items-center lg:space-x-12">

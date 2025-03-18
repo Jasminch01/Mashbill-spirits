@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Banner = () => {
   return (
-    <div className="max-w-7xl mx-auto pt-10">
+    <div className="max-w-7xl mx-auto pt-32">
       <div className="flex justify-center xl:justify-start">
         <Image src={"/mashbill1.png"} width={300} height={300} alt="mashbill" />
       </div>
@@ -33,10 +34,14 @@ const Banner = () => {
               Discover the path to owning a piece of the premium liquor market.
             </p>
           </div>
-
-          <button className="uppercase bg-[#ed0000] hover:bg-[#c40000] cursor-pointer  p-3 font-bold xl:mt-24 mt-5">
-            Contact Us
-          </button>
+          <div className="mt-5 xl:mt-24">
+            <Link
+              href={"#contact"}
+              className="uppercase bg-[#ed0000] hover:bg-[#c40000] cursor-pointer  p-3 font-bold"
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
         <div className="flex-1">
           <Image

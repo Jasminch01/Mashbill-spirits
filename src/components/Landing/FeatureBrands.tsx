@@ -1,8 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const FeatureBrands = () => {
   return (
-    <div className="max-w-7xl mx-auto relative py-10 px-4 sm:px-6 lg:px-8" id="brands">
+    <div
+      className="max-w-7xl mx-auto relative py-10 px-4 sm:px-6 lg:px-8"
+      id="brands"
+    >
       {/* Glowing Background Circle */}
       <div className="absolute top-[10rem] -right-[12rem] transform -translate-x-1/2 -translate-y-1/2">
         <div className="bg-[#ed0000] blur-3xl md:w-[700px] md:h-[521px] hidden lg:block rounded-full opacity-25" />
@@ -33,9 +37,11 @@ const FeatureBrands = () => {
               Wild &apos;N Out - No Chaser - send foodz
             </p>
             <div className="mt-5">
-              <button className="uppercase px-5 py-1 bg-[#ed0000] hover:bg-[#c40000] cursor-pointer  text-white text-sm sm:text-base">
-                More
-              </button>
+              <Link href={"https://www.jesterscourt.co"}>
+                <button className="uppercase px-5 py-1 bg-[#ed0000] hover:bg-[#c40000] cursor-pointer  text-white text-sm sm:text-base">
+                  More
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -58,9 +64,11 @@ const FeatureBrands = () => {
               Kansas University - Goldens State Wariors
             </p>
             <div className="mt-5">
-              <button className="uppercase px-5 py-1 bg-[#ed0000] hover:bg-[#c40000] cursor-pointer  text-white text-sm sm:text-base">
-                More
-              </button>
+              <Link href={"https://www.educatedspirits.io/"}>
+                <button className="uppercase px-5 py-1 bg-[#ed0000] hover:bg-[#c40000] cursor-pointer  text-white text-sm sm:text-base">
+                  More
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -83,9 +91,11 @@ const FeatureBrands = () => {
               Mizzou - Los angeles lakers
             </p>
             <div className="mt-5">
-              <button className="uppercase px-5 py-1 bg-[#ed0000] hover:bg-[#c40000] cursor-pointer text-white text-sm sm:text-base">
-                More
-              </button>
+              <Link href={'https://www.educatedspirits.io'}>
+                <button className="uppercase px-5 py-1 bg-[#ed0000] hover:bg-[#c40000] cursor-pointer text-white text-sm sm:text-base">
+                  More
+                </button>
+              </Link>
             </div>
           </div>
         </div>
