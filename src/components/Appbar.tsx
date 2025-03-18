@@ -35,11 +35,11 @@ const Appbar = () => {
       <div className="container mx-auto px-4">
         {/* Desktop Menu */}
         <div className="lg:flex items-center justify-center py-4 hidden">
-          <ul className="flex items-center lg:space-x-8">
+          <ul className="flex items-center lg:space-x-12">
             {menus.map((menu, idx) => (
               <li
                 key={idx}
-                className={`list-none font-normal text-base relative hover:text-white text-white/20 ${
+                className={`list-none font-normal text-base relative hover:text-white text-gray-300 ${
                   idx !== menus.length - 1
                     ? "lg:after:content-[''] lg:after:block lg:after:w-[1px] lg:after:h-4 lg:after:bg-gray-300 lg:after:absolute lg:after:right-[-1.5rem] lg:after:top-[0.5rem] lg:after:transform lg:after:-translate-y-1/2"
                     : ""
@@ -89,7 +89,7 @@ const Appbar = () => {
               {menus.map((menu, idx) => (
                 <li
                   key={idx}
-                  className="list-none font-normal text-2xl hover:text-white text-white/50"
+                  className="list-none font-normal text-2xl hover:text-white text-gray-300"
                 >
                   <Link href={menu.path} onClick={() => setIsOpen(false)}>
                     {menu.menu}

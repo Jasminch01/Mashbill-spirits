@@ -3,16 +3,23 @@ import React from "react";
 const Contact = () => {
   return (
     <div>
-      <div className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8 relative" id="contact">
+      <div
+        className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8 relative"
+        id="contact"
+      >
         {/* Glowing Background Circle */}
         <div className="absolute top-[3rem] -right-[30rem] transform -translate-x-1/2 -translate-y-1/2">
           <div className="bg-[#ed0000] blur-3xl xl:w-[800px] xl:h-[700px] hidden lg:block rounded-full opacity-10" />
         </div>
 
-        <div className="flex flex-col xl:flex-row gap-10 ">
+        <div className="flex flex-col xl:flex-row gap-20 ">
           {/* Heading */}
           <div className="text-white flex-1">
-            <h2 className="text-3xl uppercase mb-6">Contact Us</h2>
+            <h2 className="text-4xl uppercase mb-6 text-right">Contact Us</h2>
+            <h2 className="text-4xl uppercase mb-6 text-right">
+              let’s craft <br /> the next <br /> iconic <br /> spirits <br />{" "}
+              brand.
+            </h2>
           </div>
 
           {/* Form */}

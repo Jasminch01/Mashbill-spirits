@@ -30,13 +30,13 @@ const Data = () => {
         <div className="w-full lg:w-1/2 text-white">
           {/* Icons */}
           <div className="flex items-center gap-5 mb-6 sm:mb-10">
-            <div className="bg-[#ed0000] p-3 rounded-full">
+            <div className="bg-[#ed0000] p-3 rounded-full hover:bg-[#c40000]">
               <AiOutlineShareAlt className="text-xl" />
             </div>
-            <div className="bg-[#ed0000] p-3 rounded-full">
+            <div className="bg-[#ed0000] p-3 rounded-full hover:bg-[#c40000]">
               <IoGlobeOutline className="text-xl" />
             </div>
-            <div className="bg-[#ed0000] p-3 rounded-full">
+            <div className="bg-[#ed0000] p-3 rounded-full hover:bg-[#c40000]">
               <IoRocketOutline className="text-xl" />
             </div>
           </div>
