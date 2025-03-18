@@ -26,28 +26,28 @@ const Contact = () => {
                 <div className="flex md:flex-row flex-col md:space-x-4">
                   {/* First Name */}
                   <div className="flex-1">
-                    <p className="font-bold text-sm mb-2 text-white">
-                      First Name
-                    </p>
                     <input
                       type="text"
                       name="firstName"
                       placeholder=""
                       className="w-full px-4 py-2 border rounded border-gray-400 bg-transparent text-white placeholder-white/50 focus:outline-none"
                     />
+                    <p className="font-bold text-sm mt-3 text-white">
+                      First Name
+                    </p>
                   </div>
 
                   {/* Last Name */}
                   <div className="flex-1">
-                    <p className="font-bold text-sm mb-2 text-white">
-                      Last Name
-                    </p>
                     <input
                       type="text"
                       name="lastName"
                       placeholder=""
                       className="w-full px-4 py-2 border rounded border-gray-400 bg-transparent text-white placeholder-white/50"
                     />
+                    <p className="font-bold text-sm text-white mt-3">
+                      Last Name
+                    </p>
                   </div>
                 </div>
               </div>
@@ -56,7 +56,7 @@ const Contact = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="block font-bold text-sm text-white"
+                  className="block font-bold text-sm text-white mb-2"
                 >
                   Email
                 </label>
@@ -71,7 +71,7 @@ const Contact = () => {
               <div>
                 <label
                   htmlFor="subject"
-                  className="block font-bold text-sm text-white"
+                  className="block font-bold text-sm text-white mb-2"
                 >
                   Subject
                 </label>
@@ -86,7 +86,7 @@ const Contact = () => {
               <div>
                 <label
                   htmlFor="message"
-                  className="block font-bold text-sm text-white"
+                  className="block font-bold text-sm text-white mb-2"
                 >
                   Message
                 </label>
