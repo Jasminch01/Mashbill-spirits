@@ -1,4 +1,4 @@
-import About from "@/components/Landing/About";
+// import About from "@/components/Landing/About";
 import Banner from "@/components/Landing/Banner";
 import Contact from "@/components/Landing/Contact";
 import Data from "@/components/Landing/Data";
@@ -10,7 +10,7 @@ export default function Home() {
       <Banner />
       <Data/>
       <FeatureBrands/>
-      <About/>
+      {/* <About/> */}
       <Contact/>
     </div>
   );
