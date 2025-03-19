@@ -17,10 +17,10 @@ const menus = [
     menu: "Our Brands",
     path: "#brands",
   },
-  {
-    menu: "Leadership",
-    path: "#leadership",
-  },
+  // {
+  //   menu: "Leadership",
+  //   path: "#leadership",
+  // },
   {
     menu: "Contact",
     path: "#contact",
