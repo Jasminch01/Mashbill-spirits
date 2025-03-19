@@ -23,10 +23,10 @@ const Contact = () => {
     const { firstName, lastName, subject, message } = formData;
 
     // Construct the mailto link
-    const mailtoLink = `mailto:jasminchakma895@gmail.com?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:ziggy@mashbillspirits.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(
-      `Name: ${firstName} ${lastName}\nMessage: ${message}`
+      `Name: ${firstName} ${lastName}\n ${message}`
     )}`;
 
     // Open the default email client
